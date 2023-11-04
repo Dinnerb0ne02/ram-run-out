@@ -29,6 +29,7 @@ import sys
 def allocate_memory(size_mb):
     # 计算需要填充的元素数量
     num_elements = size_mb * 1024 * 1024 // array.array('d').itemsize
+    # 修正要提交的内存
     num_elements = math.floor(float(num_elements/1.1250000610351562))
     
     # 创建指定大小的数组
